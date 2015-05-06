@@ -1,0 +1,41 @@
+.cover
+  .row
+    .large-12.columns.text-center
+      ul data-orbit=true data-options="
+        navigation_arrows: false;
+        slide_number: false;
+        resume_on_mouseout: true;
+        timer_speed: 5000"
+        
+        li
+          = image_tag("cover-step-1.png")
+          h2 Crea tu propio Proyecto de Ley (Acuerdo / Ordenanza)
+          h2.subheader
+            | ¿Por qué esperar por el cambio si podemos ir tras ellos?!
+        li
+          = image_tag("cover-step-2.png")
+          h2 Colaborar con otros proyectos de ley
+          h2.subheader
+            | Compartir el conocimiento: muchas cabezas piensan mejor que una!
+        li
+          = image_tag("cover-step-3.png")
+          h2 Apoyar un proyecto de ley para que vaya hacia adelante!
+          h2.subheader
+            | Mostrar que usted cree en sueño colectivo.
+        li
+          = image_tag("cover-step-4.png")
+          h2 Sea protagonista de los cambios que queremos ver en el mundo!
+          h2.subheader
+            | Únase a las miles de personas que participan activamente en el proceso legislativo en sus ciudades
+
+.projects
+  .row
+    .large-12.columns.text-center
+      = image_tag "open-projects-divider.png"
+      h2 Proyecto de Ley (Acuerdos / Ordenanzas)
+  .row data-equalizer=true
+    - if @projects.any?
+      = render @projects
+    - else
+      .empty.large-12.columns.text-center
+        | Ningun Proyecto encontrado
